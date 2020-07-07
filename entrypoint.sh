@@ -11,6 +11,7 @@ async function run() {
         args: ['--no-sandbox']
     })
     const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:78.0) Gecko/20100101 Firefox/78.0')
     await page.goto('$1', {
         waitUntil: 'networkidle0'
     })
